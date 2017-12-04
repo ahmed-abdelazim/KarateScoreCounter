@@ -7,10 +7,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // Tracks the score for Team A
-    double scoreTeamA = 0;
+    float scoreTeamA = 0;
 
     // Tracks the score for Team B
-    double scoreTeamB = 0;
+    float scoreTeamB = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 0.5 points.
      */
     public void addTwoForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 0.5;
+        scoreTeamA = scoreTeamA + 0.5f;
         displayForTeamA(scoreTeamA);
     }
     /**
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Team A by 0.5 points.
      */
     public void addTwoForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 0.5;
+        scoreTeamB = scoreTeamB + 0.5f;
         displayForTeamB(scoreTeamB);
     }
     /**
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    public void displayForTeamA(double score) {
+    public void displayForTeamA(float score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team B.
      */
-    public void displayForTeamB(double score) {
+    public void displayForTeamB(float score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
